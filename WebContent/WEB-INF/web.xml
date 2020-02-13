@@ -9,6 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
     <servlet-name>add</servlet-name>
     <servlet-class>com.demoapp.AddServlet</servlet-class>
@@ -16,5 +17,14 @@
   <servlet-mapping>
     <servlet-name>add</servlet-name>
     <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>sq</servlet-name>
+    <servlet-class>com.demoapp.SquareServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sq</servlet-name>
+    <url-pattern>/sq</url-pattern>
   </servlet-mapping>
 </web-app>
