@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 public class SquareServlet extends HttpServlet {
 	
-	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException{
-		int num = (int) req.getAttribute("num");
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException{
+		
+		int num = Integer.parseInt(req.getParameter("res"));
+//		int num = (int) req.getAttribute("num");
 		PrintWriter out = res.getWriter();
 		out.println("Square of the added number is "+ (num*num));
 	}
