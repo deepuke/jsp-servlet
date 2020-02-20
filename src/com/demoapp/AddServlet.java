@@ -7,10 +7,14 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+//Annotation instead of XML.
+@WebServlet("/add")
 public class AddServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
@@ -23,10 +27,10 @@ public class AddServlet extends HttpServlet {
 		String name = ctx.getInitParameter("Name");
 		System.out.println(name);
 
-		// Getting params from servlet config
+		/*// Getting params from servlet config
 		ServletConfig scg = getServletConfig();
 		String cname = scg.getInitParameter(name);
-		System.out.println(cname);
+		System.out.println(cname);*/
 
 		res.sendRedirect("sq?res=" + result);
 
